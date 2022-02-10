@@ -129,7 +129,7 @@ public class HomebankLoginPage {
 		driver.findElement(By.xpath("//button[contains(text(),'SIGNUP')]")).click();
 		Thread.sleep(2000);
 		double beforeWithdraw = Double.parseDouble(driver.findElement(By.xpath("//td[contains(text(),'Balance')]/..//td[2]")).getText());
-		driver.findElement(By.xpath("//a[contains(text(),'引き出す')]")).click();
+		driver.findElement(By.xpath("(//a)[2]")).click();
 		double amountToWithdraw=1000;
 		
 		driver.findElement(By.xpath("//input")).sendKeys(""+amountToWithdraw);
@@ -156,7 +156,7 @@ public class HomebankLoginPage {
 		driver.findElement(By.xpath("//button[contains(text(),'SIGNUP')]")).click();
 		Thread.sleep(2000);
 		double beforeDeposit = Double.parseDouble(driver.findElement(By.xpath("//td[contains(text(),'Balance')]/..//td[2]")).getText());
-		driver.findElement(By.xpath("//a[contains(text(),'デポジット')]")).click();
+		driver.findElement(By.xpath("(//a)[1]")).click();
 		double amountToDeposit=1000;
 		
 		driver.findElement(By.xpath("//input")).sendKeys(""+amountToDeposit);
